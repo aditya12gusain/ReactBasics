@@ -1,10 +1,31 @@
 import FirstParagraph from "./Components/FirstParagraph";
 
 function App() {
+  var data = [
+    {
+      content: "Aditya",
+      number: 1,
+    },
+    {
+      content: "Details Paeg",
+      number: 2,
+    },
+    {
+      content: "sfafdf",
+      number: 3,
+    },
+  ];
+
   return (
     <div>
-      <FirstParagraph content="First Paragraph" number="4" />
-      <FirstParagraph content="Second Paragraph" number="5" />
+      {data.map((singleObject) => {
+        return (
+          <FirstParagraph
+            content={singleObject.content}
+            number={singleObject.number}
+          />
+        );
+      })}
     </div>
   );
 }
