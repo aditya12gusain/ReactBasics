@@ -1,32 +1,15 @@
-import FirstParagraph from "./Components/FirstParagraph";
+import { Route } from "react-router-dom";
+import ContactPage from "./Components/ContactPage";
+import HomePage from "./Components/HomePage";
+import Navigation from "./Components/Navigation";
 
 function App() {
-  var data = [
-    {
-      content: "Aditya",
-      number: 1,
-    },
-    {
-      content: "Details Paeg",
-      number: 2,
-    },
-    {
-      content: "sfafdf",
-      number: 3,
-    },
-  ];
-
   return (
-    <div>
-      {data.map((singleObject) => {
-        return (
-          <FirstParagraph
-            content={singleObject.content}
-            number={singleObject.number}
-          />
-        );
-      })}
-    </div>
+    <>
+      <Navigation />
+      <Route path="/" exact component={HomePage} />
+      <Route path="/contact" exact component={ContactPage} />
+    </>
   );
 }
 export default App;

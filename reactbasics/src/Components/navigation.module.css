@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#text {
+  color: green;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  height: 64px;
+  padding: 0 1rem;
+}
+
+.navigationButton {
+  padding: 10px;
+  background: white;
+  margin: 1rem;
+  font-size: 15px;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
